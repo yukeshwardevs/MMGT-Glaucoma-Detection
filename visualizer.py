@@ -123,7 +123,7 @@ def evaluate_model(model, test_loader, device):
 if __name__ == "__main__":
     # Initialize model and load weights
     model = SimCLR().to(device)
-    model.load_state_dict(torch.load("simclr_model.pth"))
+    model.load_state_dict(torch.load("/kaggle/working/simclr_model.pth",weights_only=True))
     
     # Create visualizer
     visualizer = GlaucomaVisualizer(model, test_loader, device)
@@ -131,7 +131,6 @@ if __name__ == "__main__":
     # Generate visualizations
     visualizer.plot_roc_curve()
     visualizer.plot_confusion_matrix()
-    visualizer.visualize_attention_maps("example_image.jpg")
     
     # Evaluate model
     accuracy, probs, labels = evaluate_model(model, test_loader, device)
