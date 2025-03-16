@@ -62,9 +62,7 @@ Our approach follows guidelines from:
    - Integration with existing healthcare systems
    - Patient-specific risk assessment
 
-Here’s your polished **Markdown** version with improved clarity and structure:  
 
-```markdown
 # **Running the Streamlit Application**
 
 Follow these steps to set up, train, and deploy the Streamlit application using Docker.
@@ -72,7 +70,7 @@ Follow these steps to set up, train, and deploy the Streamlit application using 
 ## **1. Clone or Download the Repository**
 - Clone the repository using:
   ```bash
-  git clone <repository_url>
+  git clone https://github.com/yukeshwardevs/MMGT-Glaucoma-Detection
   ```
   *OR*  
 - Download and extract the repository files to your local system.
@@ -120,16 +118,6 @@ Follow these steps to set up, train, and deploy the Streamlit application using 
   ```
 - The Streamlit app should now be live and ready for use! 🎉
 
-## Running the streamlit application
-1. Clone the repository or download the repository files to local system.
-2. Download the dataset and move to active directory.
-3. Replace the paths in the "model.py" and "app.py" with your active directory paths to respective data paths.
-4. Open terminal in the active directory and run "pip install -r requirements.txt".
-5. Train the model by running "python3 model.py".
-6. Model will be saved to active directory. Copy the model path and replace in the model path in the app.py file.
-7. Build the app by running "docker build -f .\DockerFile -t mmgt-glaucoma ."
-8. Run the app by running "docker run -p 8501:8501 mmgt-glaucoma"
-9. The app will be available at the port 8501. Paste "http://localhost:8501/" in your browser to connect to the app.
 
 ## References
 
